@@ -8,6 +8,18 @@ function setAnswer() {
     getAnswerText(getSequence());
 }
 
+function setFlag(valid) {
+  var classList = document.getElementById("flag").classList;
+  if (valid) {
+    classList.remove("invalid");
+    classList.add("valid");
+  }
+  else {
+    classList.remove("valid");
+    classList.add("invalid");
+  }
+}
+
 function getSequence() {
   n = []
   for(var i = 1; i <= 3; i++)
@@ -24,7 +36,8 @@ function getAnswerText(n) {
   }
 
   var valid = validate(n);
-
+  setFlag(valid);
+  
   return (
     n.toString() +
     " is" +
