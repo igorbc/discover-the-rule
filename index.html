@@ -3,14 +3,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/index.css" />
   <script type="text/javascript" src="js/theRule.js"></script>
+  <script type="text/javascript" src="js/handleKeys.js"></script>
   <head>
     <title>Discover the rule</title>
   </head>
   <body onload="start()">
-    <p>Type 3 numbers and hit Enter or the button<p>
-    <input type="text" id="n1" value = 2>
-    <input type="text" id="n2" value = 4>
-    <input type="text" id="n3" value = 8>
+    <p>Type 3 numbers and hit Enter</p>
+    <div class="inputs">
+      <input type="text" id="n1" value = 2>
+      <input type="text" id="n2" value = 4>
+      <input type="text" id="n3" value = 8>
+    </div>
+    <div id="answer">
+      <p id="answer-text"></p>
+    </div>
   </body>
 </html>
