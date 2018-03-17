@@ -14,9 +14,9 @@
     <h4>Can you find out the underlying rule of this sequence?</h4>
     <p>Type 3 numbers and hit Enter</p>
     <div class="inputs">
-      <input type="text" class="sequence-number" id="n1" value = 2>
-      <input type="text" class="sequence-number" id="n2" value = 4>
-      <input type="text" class="sequence-number" id="n3" value = 8>
+      <input type="text" class="sequence-number" id="n1" value = 2 onfocus="this.select()">
+      <input type="text" class="sequence-number" id="n2" value = 4 onfocus="this.select()">
+      <input type="text" class="sequence-number" id="n3" value = 8 onfocus="this.select()">
     </div>
     <div id="answer">
       <p id="answer-text"></p><div id="flag"></div>
@@ -24,7 +24,7 @@
     <hr>
     <div class="the-supposed-rule">
       <h5>Use the variables 'n' and 'nPlus1' and javascript to make up your own rule, and then test it!</h5>
-      <textarea id="the-supposed-rule" rows = "5" cols = "50">(n * 2) == nPlus1</textarea>
+      <textarea id="the-supposed-rule" rows = "5" cols = "50">nPlus1 == (n * 2)</textarea>
       <div id="test-rule" onclick="testRule()">Test your rule</div>
       <p id="rule-validation"></p>
     </div>
