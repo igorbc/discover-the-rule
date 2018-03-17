@@ -48,3 +48,9 @@ td {
   text-align: left;
   padding: 5px;
 }
+
+h5 {
+  display: block;
+  text-transform: left;
+  font-weight: normal;
+}

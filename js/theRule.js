@@ -69,25 +69,32 @@ function validate(n) {
 function validateRule(){
   func = document.getElementById("the-supposed-rule").value + ";"
 
-  // console.log(func);
+  console.log(func);
 
   for(var i = 0; i < testCases.length; i++) {
-    var n1 = testCases[i].seq[0];
-    var n2 = testCases[i].seq[1];
-    var n3 = testCases[i].seq[2];
+    var seq = testCases[i].seq;
 
-    funcResult = eval(func);
-    // console.log(funcResult);
-    if (testCases[i].ans !== eval(func)) {
-      // console.log("invalid rule");
-      // console.log(
-      //   "got " +
-      //   eval(func) +
-      //   " for " +
-      //   [n1, n2, n3].toString() +
-      //   " when the answer should have been " +
-      //   testCases[i].ans
-      // );
+    for(var j = 0; j < seq.length - 1; j++) {
+      var n = seq[j];
+      var nPlus1 = seq[j+1];
+      theAnswer = true;
+      funcResult = eval(func);
+      console.log(funcResult);
+      console.log("n " + n);
+      console.log("nPlus1 " + nPlus1);
+      theAnswer = theAnswer && eval(func);
+      if(!theAnswer) break;
+    }
+    if(theAnswer != testCases[i].ans) {
+      console.log("invalid rule");
+      console.log(
+        "got " +
+        theAnswer +
+        " for " +
+        testCases[i].seq.toString() +
+        " when the answer should have been " +
+        testCases[i].ans
+      );
       return false;
     }
   }
