@@ -10,10 +10,41 @@
   display: inline-block;
 }
 
+.tiny-flag {
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
 .valid {
   background-color: #0a0;
 }
 
 .invalid {
   background-color: #a00;
+}
+
+#the-supposed-rule {
+  rows: 4;
+  cols: 80;
+  font-family: monospace;
+  text-align: left;
+}
+
+.the-supposed-rule {
+  margin: 20px;
+}
+
+#test-rule {
+  margin: 15px;
+  padding: 10px;
+  background-color: #aaa;
+  border-radius: 5px;
+  cursor: help;
+}
+
+td {
+  text-align: left;
+  padding: 5px;
 }
