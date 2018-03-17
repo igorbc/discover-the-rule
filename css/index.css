@@ -54,3 +54,7 @@ h5 {
   text-transform: left;
   font-weight: normal;
 }
+
+.sequence-number {
+  width: 10%;
+}

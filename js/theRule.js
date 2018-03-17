@@ -1,5 +1,6 @@
 function start() {
   setupKeyResponse();
+  document.getElementById("flag").ontouchstart = setAnswer;
   setAnswer();
 }
 
